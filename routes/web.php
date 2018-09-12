@@ -5,5 +5,5 @@ Route::group([
 	'prefix' => 'barcode',
 	'as' => 'barcode'
 ], function() {
-	Route::get('/', 'BarcodeController@index')->name('index');
+	Route::get('/{type}/{text}', 'BarcodeController@index')->name('index');
 });
