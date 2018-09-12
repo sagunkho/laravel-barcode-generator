@@ -1,4 +1,4 @@
-# laravel-barcode-generator
+# Laravel Barcode Generator
 A barcode generator package for Laravel 5.* based on zendframework/zend-barcode.
 
 # Installation
