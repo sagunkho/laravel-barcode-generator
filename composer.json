@@ -1,0 +1,31 @@
+{
+    "name": "sagunkho/laravel-barcode-generator",
+    "description": "Barcode generator for laravel based on zendframework/zend-barcode",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sagun Khosla",
+            "email": "sagunxp@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "zendframework/zend-barcode": "^2.7@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "SagunKho\\BarcodeGenerator\\": "/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SagunKho\\BarcodeGenerator\\BarcodeGeneratorServiceProvider"
+            ],
+            "aliases": {
+                "BarcodeGenerator": "SagunKho\\BarcodeGenerator\\Facades\\BarcodeGeneratorFacade"
+            }
+        }
+    }
+}
