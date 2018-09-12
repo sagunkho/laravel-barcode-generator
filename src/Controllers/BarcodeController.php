@@ -12,7 +12,7 @@ class BarcodeController extends Controller
 	public function index(Request $request, $type, $text)
 	{
 		// Only the text to draw is required.
-		$barcode_options = ['text' => $text];
+		$barcode_options = [ 'text' => $text ];
 
 		// No required options.
 		$renderer_options = [];
