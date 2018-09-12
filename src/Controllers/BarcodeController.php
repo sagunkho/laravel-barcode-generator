@@ -5,27 +5,28 @@ namespace SagunKho\BarcodeGenerator\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Zend\Barcode\Barcode;
+use Response;
 
 class BarcodeController extends Controller
 {
-	public function index(Request $request)
+	public function index(Request $request, $type, $text)
 	{
 		// Only the text to draw is required.
-		$barcode_options = ['text' => 'ZEND-FRAMEWORK'];
+		$barcode_options = ['text' => $text];
 
 		// No required options.
 		$renderer_options = [];
 		$renderer = Barcode::factory(
-			'code39',
+			$type,
 			'image',
 			$barcode_options,
 			$renderer_options
 		);
 		
-		$image_resource = $renderer->draw();
+		$response = Response::make($renderer->render(), 200);
 		
-		return view("barcode::barcode", [
-			'image_resource' => $image_resource
-		]);
+		$response->header("Content-Type", 'image/png');
+		
+		return $response;
 	}
 }
