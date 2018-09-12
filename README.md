@@ -1,12 +1,12 @@
 # Laravel Barcode Generator
 A barcode generator package for Laravel 5.* based on zendframework/zend-barcode.
 
-# Installation
+## Installation
 ```
 composer require sagunkho/laravel-barcode-generator
 ```
 
-# Usage
+## Usage
 ```
 https://example.com/barcode/{type}/{text}
 ```
@@ -17,3 +17,10 @@ https://example.com/barcode/upca/10101010101
 ```
 
 ![Example UPCA](https://image.ibb.co/gewvjp/10101010101.png)
+
+
+## Documentation
+[Supported Barcodes](https://docs.zendframework.com/zend-validator/validators/barcode/)
+
+## Credits
+[zendframework/zend-barcode](https://github.com/zendframework/zend-barcode)
