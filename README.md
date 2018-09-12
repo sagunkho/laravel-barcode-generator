@@ -11,7 +11,7 @@ composer require sagunkho/laravel-barcode-generator
 https://example.com/barcode/{type}/{text}
 ```
 
-# Example
+## Example
 ```
 https://example.com/barcode/upca/10101010101
 ```
